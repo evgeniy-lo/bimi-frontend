@@ -1,0 +1,153 @@
+.about {
+  overflow: hidden;
+  padding-bottom: 35px;
+
+  @include above($lg) {
+    padding-bottom: 55px;
+  }
+
+  @include above($xl) {
+    padding-bottom: 50px;
+  }
+
+  .about__cards {
+    margin-top: 25px;
+    margin-right: -15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    overflow-x: auto;
+
+    @include above($md) {
+      margin-top: 35px;
+    }
+
+    @include above($xl) {
+      margin-right: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      overflow: hidden;
+    }
+  }
+
+  .about__cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+  }
+
+  .about__card {
+    position: relative;
+    padding: 32px;
+    @include size(270px, 300px);
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: $border-radius-sm;
+    //cursor: pointer;
+  }
+
+  .about__card--image {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include size(100%);
+      background-color: rgba($black, .15);
+      transition: background-color 150ms ease-in;
+    }
+
+    &:hover {
+      &:before {
+        background-color: rgba($senary-color, .90);
+      }
+
+      .card__content {
+        opacity: 1;
+      }
+    }
+  }
+
+  .about__card--image-1 {
+    background-image: url("../assets/img/about-image-1.jpg");
+    @include retina {
+      background-image: url("../assets/img/about-image-1@2x.jpg");
+    }
+  }
+
+  .about__card--image-2 {
+    background-image: url("../assets/img/about-image-2.jpg");
+    @include retina {
+      background-image: url("../assets/img/about-image-2@2x.jpg");
+    }
+  }
+
+  .about__card--image-3 {
+    background-image: url("../assets/img/about-image-3.jpg");
+    @include retina {
+      background-image: url("../assets/img/about-image-3@2x.jpg");
+    }
+  }
+
+  .about__card--text {
+    padding: 25px;
+    background-color: $septenary-color;
+    transition: background-color 150ms ease-in;
+    pointer-events: none;
+
+    .card__name {
+      color: $senary-color;
+    }
+  }
+
+  .card__name {
+    position: relative;
+    font-family: $font-primary;
+    font-size: 40px;
+    font-weight: $font-bold;
+    line-height: 1;
+    color: $septenary-color;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .card__list-item, .card__text {
+    font-family: $font-primary;
+    font-size: 30px;
+    font-weight: $font-bold;
+    line-height: 1;
+    color: $senary-color;
+    text-transform: uppercase;
+  }
+
+  .card__text {
+    margin-top: 10px;
+    font-size: 26px;
+  }
+
+  .card__content {
+    position: absolute;
+    top: 90px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+  }
+
+  .card__desc {
+    color: $secondary-color;
+  }
+
+  .button {
+    display: flex;
+    margin: 15px auto 0;
+
+    @include above($xl) {
+      margin-top: 32px;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 1px $secondary-color, 0 0 0 3px $primary-color;
+    }
+  }
+}

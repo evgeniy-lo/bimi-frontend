@@ -1,0 +1,73 @@
+.clients {
+  overflow: hidden;
+
+  @include above($md) {
+    padding-top: 60px;
+  }
+
+  @include above($lg) {
+    padding-top: 100px;
+  }
+
+  .clients__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 35px -20px -20px;
+
+    @include above($md) {
+      margin: 35px -55px 0;
+    }
+  }
+
+  .clients__logo {
+    margin-bottom: 20px;
+    padding: 0 20px;
+
+    @include above($md) {
+      margin-bottom: 0;
+      padding: 0 55px;
+    }
+  }
+
+  .clients__logo--1 img{
+    @include size(74px, auto);
+
+    @include above($md) {
+      @include size(150px, auto)
+    }
+  }
+
+  .clients__logo--2 img{
+    @include size(56px, auto);
+
+    @include above($md) {
+      @include size(113px, auto)
+    }
+  }
+
+  .clients__logo--3 img{
+    @include size(84px, auto);
+
+    @include above($md) {
+      @include size(169px, auto)
+    }
+  }
+
+  .clients__logo--4 img{
+    @include size(72px, auto);
+
+    @include above($md) {
+      @include size(148px, auto)
+    }
+  }
+
+  .clients__logo--5 img{
+    @include size(74px, auto);
+
+    @include above($md) {
+      @include size(148px, auto)
+    }
+  }
+}

@@ -1,0 +1,74 @@
+$fontsPath: "../assets/fonts";
+
+@font-face {
+  font-family: 'Druk Cyr';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$fontsPath}/DrukCyr-Super.eot');
+  src: url('#{$fontsPath}/DrukCyr-Super.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsPath}/DrukCyr-Super.woff2') format('woff2'),
+  url('#{$fontsPath}/DrukCyr-Super.woff') format('woff'),
+  url('#{$fontsPath}/DrukCyr-Super.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Druk Cyr';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$fontsPath}/DrukCyr-Bold.eot');
+  src: url('#{$fontsPath}/DrukCyr-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsPath}/DrukCyr-Bold.woff2') format('woff2'),
+  url('#{$fontsPath}/DrukCyr-Bold.woff') format('woff'),
+  url('#{$fontsPath}/DrukCyr-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Druk Cyr';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$fontsPath}/DrukCyr-Medium.eot');
+  src: url('#{$fontsPath}/DrukCyr-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsPath}/DrukCyr-Medium.woff2') format('woff2'),
+  url('#{$fontsPath}/DrukCyr-Medium.woff') format('woff'),
+  url('#{$fontsPath}/DrukCyr-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$fontsPath}/Montserrat-Regular.eot');
+  src: url('#{$fontsPath}/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsPath}/Montserrat-Regular.woff2') format('woff2'),
+  url('#{$fontsPath}/Montserrat-Regular.woff') format('woff'),
+  url('#{$fontsPath}/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$fontsPath}/Montserrat-Medium.eot');
+  src: url('#{$fontsPath}/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsPath}/Montserrat-Medium.woff2') format('woff2'),
+  url('#{$fontsPath}/Montserrat-Medium.woff') format('woff'),
+  url('#{$fontsPath}/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$fontsPath}/Montserrat-Bold.eot');
+  src: url('#{$fontsPath}/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsPath}/Montserrat-Bold.woff2') format('woff2'),
+  url('#{$fontsPath}/Montserrat-Bold.woff') format('woff'),
+  url('#{$fontsPath}/Montserrat-Bold.ttf') format('truetype');
+}
+

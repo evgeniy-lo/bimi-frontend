@@ -1,0 +1,101 @@
+@import 'variables';
+
+/* Text mixins */
+@mixin heading-primary {
+  font-family: $font-primary;
+  font-size: $heading-primary-size-sm;
+  font-weight: $font-super;
+  line-height: $heading-primary-height-sm;
+
+  @include above($lg) {
+    font-size: $heading-primary-size;
+    line-height: $heading-primary-height;
+  }
+}
+
+@mixin heading-secondary {
+  font-family: $font-primary;
+  font-size: $heading-secondary-size-sm;
+  font-weight: $font-super;
+  line-height: $heading-secondary-height-sm;
+  letter-spacing: $letter-spacing;
+
+  @include above($lg) {
+    font-size: $heading-secondary-size;
+    line-height: $heading-secondary-height;
+  }
+}
+
+@mixin heading-tetriary {
+  font-family: $font-primary;
+  font-size: $heading-tertiary-size-sm;
+  font-weight: $font-bold;
+  line-height: $heading-tertiary-height-sm;
+  letter-spacing: $letter-spacing;
+
+  @include above($lg) {
+    font-size: $heading-tertiary-size;
+    line-height: $heading-tertiary-height;
+  }
+}
+
+@mixin heading-quaternary {
+  font-size: $heading-quaternary-size-sm;
+  line-height: $heading-quaternary-height-sm;
+  letter-spacing: $letter-spacing;
+
+  @include above($lg) {
+    font-size: $heading-quaternary-size;
+    line-height: $heading-quaternary-height;
+  }
+}
+
+@mixin text-primary {
+  font-size: $text-primary-size-sm;
+  line-height: $text-primary-height-sm;
+  letter-spacing: $letter-spacing;
+
+  @include above($lg) {
+    font-size: $text-primary-size;
+    line-height: $text-primary-height;
+  }
+}
+
+@mixin text-secondary {
+  font-size: $text-secondary-size-sm;
+  font-weight: $font-medium;
+  line-height: $text-secondary-height-sm;
+  letter-spacing: $letter-spacing;
+
+  @include above($lg) {
+    font-size: $text-secondary-size;
+    line-height: $text-secondary-height;
+  }
+}
+
+@mixin text-tetriary {
+  font-size: $text-tertiary-size-sm;
+  line-height: $text-tertiary-height-sm;
+  letter-spacing: $letter-spacing;
+
+  @include above($lg) {
+    font-size: $text-tertiary-size;
+    line-height: $text-tertiary-height;
+  }
+}
+
+/* Size mixins */
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin min-size($min-width, $min-height: $min-width) {
+  min-width: $min-width;
+  min-height: $min-height;
+}
+
+@mixin max-size($max-width, $max-height: $max-width) {
+  max-width: $max-width;
+  max-height: $max-height;
+}

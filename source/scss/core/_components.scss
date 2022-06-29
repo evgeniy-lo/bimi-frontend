@@ -1,0 +1,392 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @include size(270px, 46px);
+  margin: 0;
+  padding: 0;
+  font-family: $font-secondary;
+  font-size: $text-primary-size;
+  font-weight: $font-bold;
+  line-height: 1;
+  color: $quaternary-color;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: $quinary-color;
+  border: 2px solid $primary-color;
+  border-radius: $border-radius-sm;
+  outline: none;
+  transition: color .3s, background-color .3s ease;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:hover,
+  &:active {
+    color: $quinary-color;
+    background-color: $quaternary-color;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 1px $quaternary-color, 0 0 0 3px $secondary-color;
+    outline: none;
+  }
+
+  &--short {
+    @include size(170px, 46px);
+    font-size: $text-tertiary-size;
+  }
+
+  //&--social {
+  //  background-color: transparent;
+  //
+  //  &-red {
+  //    color: $nonary-color;
+  //    border: 2px solid $nonary-color;
+  //
+  //    &:hover,
+  //    &:active {
+  //      color: $secondary-color;
+  //      background-color: $nonary-color;
+  //    }
+  //
+  //    &:focus-visible {
+  //      box-shadow: 0 0 0 2px $primary-color, 0 0 0 4px $nonary-color;
+  //    }
+  //  }
+  //
+  //  &-blue {
+  //    color: $quaternary-color;
+  //    border: 2px solid $quaternary-color;
+  //
+  //    &:hover,
+  //    &:active {
+  //      color: $secondary-color;
+  //      background-color: $quaternary-color;
+  //    }
+  //
+  //    &:focus-visible {
+  //      box-shadow: 0 0 0 2px $primary-color, 0 0 0 4px $quaternary-color;
+  //    }
+  //  }
+  //}
+}
+
+/* Form */
+.form {
+  margin-top: 36px;
+
+  @include above($md) {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form__item {
+    position: relative;
+    width: 100%;
+    max-width: 170px;
+    margin: 0 auto 15px;
+
+    @include above($md) {
+      margin-right: 30px;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
+    @include above($lg) {
+      max-width: 210px;
+    }
+
+    &:before {
+      content: "";
+      top: 8px;
+      left: 0;
+      position: absolute;
+      @include size(100%, 14.5px);
+      background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 61 19'%3E%3Cpath d='M4.64 15.144V4.056h3.096v11.088H4.64Zm-4.152-4.08V8.136h11.424v2.928H.488ZM20.002 18.288c-1.168 0-2.328-.152-3.48-.456-1.152-.32-2.128-.768-2.928-1.344l1.512-2.976c.64.464 1.384.832 2.232 1.104a8.362 8.362 0 0 0 2.568.408c.976 0 1.744-.192 2.304-.576.56-.384.84-.912.84-1.584 0-.64-.248-1.144-.744-1.512-.496-.368-1.296-.552-2.4-.552H18.13V8.232l4.68-5.304.432 1.392h-8.808V1.2h11.76v2.52l-4.656 5.304-1.968-1.128h1.128c2.064 0 3.624.464 4.68 1.392 1.056.928 1.584 2.12 1.584 3.576 0 .944-.248 1.832-.744 2.664-.496.816-1.256 1.48-2.28 1.992-1.024.512-2.336.768-3.936.768ZM36.437 18.288c-1.408 0-2.64-.208-3.696-.624-1.056-.432-1.88-1.032-2.472-1.8-.592-.784-.888-1.696-.888-2.736 0-1.04.288-1.92.864-2.64.592-.736 1.416-1.288 2.472-1.656 1.056-.384 2.296-.576 3.72-.576 1.44 0 2.688.192 3.744.576 1.072.368 1.896.92 2.472 1.656.592.72.888 1.6.888 2.64s-.296 1.952-.888 2.736c-.592.768-1.424 1.368-2.496 1.8-1.056.416-2.296.624-3.72.624Zm0-2.856c.976 0 1.744-.216 2.304-.648.576-.432.864-1.024.864-1.776s-.288-1.336-.864-1.752c-.56-.432-1.328-.648-2.304-.648-.96 0-1.72.216-2.28.648-.56.416-.84 1-.84 1.752s.28 1.344.84 1.776c.56.432 1.32.648 2.28.648Zm0-5.208c-1.296 0-2.432-.176-3.408-.528-.96-.352-1.712-.864-2.256-1.536-.528-.688-.792-1.504-.792-2.448 0-.992.272-1.84.816-2.544.544-.72 1.304-1.272 2.28-1.656.976-.4 2.096-.6 3.36-.6 1.296 0 2.424.2 3.384.6.976.384 1.736.936 2.28 1.656.56.704.84 1.552.84 2.544 0 .944-.272 1.76-.816 2.448-.528.672-1.28 1.184-2.256 1.536-.976.352-2.12.528-3.432.528Zm0-2.28c.816 0 1.456-.184 1.92-.552.48-.368.72-.872.72-1.512 0-.672-.248-1.192-.744-1.56-.48-.368-1.112-.552-1.896-.552-.768 0-1.392.184-1.872.552-.48.368-.72.888-.72 1.56 0 .64.232 1.144.696 1.512.464.368 1.096.552 1.896.552ZM53.241 18.288c-1.376 0-2.608-.336-3.696-1.008-1.088-.688-1.944-1.68-2.568-2.976-.624-1.296-.936-2.864-.936-4.704 0-1.84.312-3.408.936-4.704.624-1.296 1.48-2.28 2.568-2.952 1.088-.688 2.32-1.032 3.696-1.032 1.392 0 2.624.344 3.696 1.032 1.088.672 1.944 1.656 2.568 2.952.624 1.296.936 2.864.936 4.704 0 1.84-.312 3.408-.936 4.704-.624 1.296-1.48 2.288-2.568 2.976-1.072.672-2.304 1.008-3.696 1.008Zm0-3.288c.656 0 1.224-.184 1.704-.552.496-.368.88-.952 1.152-1.752.288-.8.432-1.832.432-3.096s-.144-2.296-.432-3.096c-.272-.8-.656-1.384-1.152-1.752-.48-.368-1.048-.552-1.704-.552-.64 0-1.208.184-1.704.552-.48.368-.864.952-1.152 1.752-.272.8-.408 1.832-.408 3.096s.136 2.296.408 3.096c.288.8.672 1.384 1.152 1.752a2.785 2.785 0 0 0 1.704.552Z' fill='%23222'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      pointer-events: none;
+
+      @include above($md) {
+        top: 14.9px;
+      }
+
+      @include above($lg) {
+        top: 13px;
+        @include size(100%, 18.9px);
+      }
+    }
+  }
+
+  label {
+    display: none;
+  }
+
+  .form__input {
+    @include size(100%);
+    padding-left: 48px;
+    @include heading-quaternary;
+    color: $primary-color;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $primary-color;
+    border-radius: 0;
+    transition: opacity .3s ease-in;
+
+    @include above($lg) {
+      padding-left: 63px;
+    }
+
+    &::placeholder {
+      @include heading-quaternary;
+      color: $primary-color;
+      font-weight: 700;
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-bottom: 2px solid $primary-color;
+    }
+  }
+
+  .button {
+    position: relative;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 1px $septenary-color, 0 0 0 3px $primary-color;
+    }
+  }
+
+  &-message {
+    font-family: $font-emoji;
+    text-align: center;
+
+    span {
+      font-family: $font-secondary;
+    }
+  }
+}
+
+/* Modal */
+.modal {
+  .modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+  }
+
+  .modal__container {
+    width: calc(100% - 30px);
+    max-width: 700px;
+    max-height: 100vh;
+    padding: 15px;
+    background-color: $secondary-color;
+    border-radius: $border-radius-sm;
+    overflow-y: auto;
+
+    @include above($sm + 55) {
+      padding: 30px;
+    }
+
+    @include above($sm + 210) {
+      padding: 60px;
+    }
+  }
+
+  .modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal__title {
+    font-family: $font-primary;
+    font-size: $heading-tertiary-size;
+    line-height: $heading-tertiary-height;
+    font-weight: $font-super;
+    text-align: center;
+
+    @include above($sm + 210) {
+      font-size: $heading-secondary-size;
+      line-height: $heading-secondary-height;
+    }
+  }
+
+  .modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    @include size(24px);
+    padding: 0;
+    background: transparent;
+    border: 0;
+    transition: transform 150ms ease-in;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 15px;
+      @include size(2px, 24px);
+      background-color: $primary-color;
+
+      @include above($sm + 280) {
+        height: 32px;
+      }
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    @include above($sm + 280) {
+      top: 30px;
+      right: 30px;
+      @include size(32px);
+    }
+  }
+
+  .modal__form {
+    margin-top: 30px;
+
+    @include above($sm + 210) {
+      display: flex;
+      justify-content: center;
+
+      .form__item {
+        margin: 0 30px 0 0;
+      }
+    }
+
+    @include above($md) {
+      margin-top: 60px;
+    }
+
+    .button {
+      display: block;
+      margin: 0 auto;
+
+      @include above($sm + 210) {
+        margin: 0;
+      }
+    }
+  }
+
+  &-animation-slide {
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+
+    &[aria-hidden="false"] {
+      .modal__overlay {
+        animation: modal-fadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+      }
+
+      .modal__container {
+        animation: modal-slideIn .3s cubic-bezier(0, 0, .2, 1);
+      }
+    }
+
+    &[aria-hidden="true"] {
+      .modal__overlay {
+        animation: modal-fadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+      }
+
+      .modal__container {
+        animation: modal-slideOut .3s cubic-bezier(0, 0, .2, 1);
+      }
+    }
+
+    .modal__container, .modal__overlay {
+      will-change: transform;
+    }
+  }
+}
+
+/* Swiper slider */
+.reviews--desktop {
+  .swiper {
+    &-slide {
+      margin-left: 15px;
+      width: 700px !important;
+      -webkit-transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+
+      &[data-swiper-slide-index="2"] {
+        width: auto !important;
+      }
+
+      @include above($lg) {
+        width: 770px !important;
+
+        &[data-swiper-slide-index="2"] {
+          width: 1270px !important;
+        }
+      }
+    }
+
+    &-pagination {
+      bottom: -41px;
+      z-index: 9;
+
+      @include above($lg) {
+        bottom: -66px;
+      }
+    }
+
+    &-pagination-bullet {
+      @include size(40px, 6px);
+      background-color: $septenary-color;
+      border-radius: 0;
+      opacity: 1;
+
+      &-active {
+        background-color: $link-color;
+      }
+    }
+  }
+}
+
+/* Animations */
+@keyframes modal-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes modal-slideIn {
+  from { transform: translateY(20px); }
+  to { transform: translateY(0); }
+}
+
+@keyframes modal-slideOut {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

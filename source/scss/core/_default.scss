@@ -1,0 +1,65 @@
+@import 'variables';
+
+.body {
+  font-family: $font-secondary;
+  font-weight: $font-medium;
+  @include text-primary;
+  overflow-x: hidden;
+  color: $primary-color;
+  background-color: $secondary-color;
+}
+
+.scroll-lock {
+  overflow: hidden;
+  touch-action: none;
+}
+
+section {
+  padding: 30px 0;
+
+  @include above($lg) {
+    padding: 50px 0;
+  }
+}
+
+.main {
+  background-color: $secondary-color;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::before,
+	&::after {
+      display: table;
+      content: "";
+  }
+
+	&::after {
+      clear: both;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+
+  @include above($md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.section-title {
+  @include heading-secondary;
+  text-align: left;
+
+  @include above($lg) {
+    text-align: center;
+  }
+}

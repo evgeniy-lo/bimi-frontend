@@ -1,0 +1,173 @@
+.steps {
+  position: relative;
+  overflow: hidden;
+
+  .steps__content {
+    margin-top: 32px;
+
+    @include above($md) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    @include above($lg) {
+      margin-top: 45px;
+    }
+  }
+
+  .steps__list {
+    counter-reset: numbers;
+
+    @include above($md) {
+      width: calc(50% - 16px);
+    }
+
+    @include above($xl) {
+      width: 530px;
+    }
+  }
+
+  .steps__list-item {
+    position: relative;
+    padding-left: 44px;
+    counter-increment: numbers;
+
+    + .steps__list-item {
+      margin-top: 20px;
+    }
+
+    @include above($lg) {
+      padding-left: 46px;
+
+      + .steps__list-item {
+        margin-top: 60px;
+      }
+    }
+
+    &:before {
+      content: counter(numbers);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include size(28px, 52px);
+      @include heading-quaternary;
+      font-weight: $font-medium;
+      border: 1px solid $primary-color;
+      border-radius: $border-radius-md;
+    }
+  }
+
+  .steps__list-title {
+    margin-bottom: 8px;
+    @include heading-tetriary;
+
+    @include above($lg) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .steps__illustration {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+
+    img {
+      @include size(626px, 639px);
+      object-fit: contain;
+      opacity: .05;
+    }
+
+    @include above($md) {
+      top: 100px;
+      right: 55%;
+      bottom: auto;
+      left: auto;
+      width: 39%;
+      transform: translateX(0);
+
+      img {
+        @include size(100%);
+        opacity: 1;
+      }
+    }
+
+    @include above($lg) {
+      top: 191px;
+      right: calc(50% + 24px);
+      max-width: 604px;
+    }
+
+    @include above($xl) {
+      right: calc(50% - 18px);
+      width: 604px;
+    }
+  }
+
+  .steps__cta {
+    position: relative;
+    @include size(calc(100% - 31px), 100%);
+    margin-top: 65px;
+    padding: 30px 20px 45px;
+    background-color: $septenary-color;
+    border-radius: $border-radius-sm;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -44px;
+      right: -28px;
+      @include size(82px);
+      background-image: url("../assets/img/spinner.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: spin infinite 15s linear;
+
+      @include above($md) {
+        right: auto;
+        left: calc(-85px / 2);
+      }
+
+      @include above($xl) {
+        top: -66px;
+        left: -73px;
+        @include size(110px);
+      }
+    }
+
+    @include above(480px) {
+      width: 312px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include above($md) {
+      position: absolute;
+      bottom: 30px;
+      left: 60px;
+      height: auto;
+      margin: 0;
+    }
+
+    @include above($lg) {
+      bottom: 73px;
+      width: 428px;
+      padding: 35px;
+    }
+
+    @include above($xl) {
+      right: calc(50% + 81px);
+      left: auto;
+    }
+  }
+
+  .button {
+    position: absolute;
+    right: -31px;
+    bottom: calc(-46px / 2);
+  }
+}

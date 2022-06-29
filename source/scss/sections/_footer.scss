@@ -1,0 +1,98 @@
+.footer {
+  padding: 80px 0;
+  color: $secondary-color;
+  background-color: $primary-color;
+  text-align: center;
+
+  @include above($lg) {
+    padding: 120px 0;
+  }
+
+  .section-title {
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  .footer__block {
+    margin-top: 32px;
+
+    @include above($lg) {
+      margin-top: 40px;
+    }
+  }
+
+  .footer__block--phone {
+    margin-top: 40px;
+
+    @include  above($lg) {
+      margin-top: 20px;
+    }
+  }
+
+  .footer__block--address {
+    .footer__text:last-child {
+      margin: 10px 0 0;
+    }
+  }
+
+  //.footer__block--telegram {
+  //  margin-top: 20px;
+  //}
+  //
+  //.footer__block--instagram {
+  //  .footer__text {
+  //    margin-bottom: 10px;
+  //  }
+  //}
+
+  .footer__text {
+    margin-bottom: 5px;
+    color: $septenary-color;
+  }
+
+  .footer__link {
+    position: relative;
+    @include heading-quaternary;
+    color: $secondary-color;
+    text-decoration: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      @include size(100%, 2px);
+      bottom: -6px;
+      left: 0;
+      background-color: $secondary-color;
+      border-radius: $border-radius-sm;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+
+    &:active,
+    &:hover,
+    &:focus-visible{
+      outline: none;
+
+      &:before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .footer__text--address {
+    @include heading-quaternary;
+    color: $secondary-color;
+  }
+
+  .footer__image {
+    margin-top: 50px;
+    @include size(100%);
+    @include max-size(740px, 200px);
+
+    @include above($lg) {
+      margin-top: 70px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.main {
+  margin-top: 70px;
+
+  @include above($lg) {
+    position: relative;
+    margin-top: 100px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 0;
+      @include size(100%, 845px);
+      background-image: url("../assets/img/bg-letters.svg");
+      background-attachment: fixed;
+      background-size: 200%;
+      background-position: center;
+      pointer-events: none;
+    }
+  }
+
+  @include above($xl) {
+    &:before {
+      height: 895px;
+    }
+  }
+
+  @include above($xxl) {
+    &:before {
+      background-size: 120%;
+    }
+  }
+}

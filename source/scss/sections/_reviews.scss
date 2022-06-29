@@ -1,0 +1,139 @@
+.reviews {
+  .reviews--mobile {
+    margin-top: 32px;
+    overflow: hidden;
+
+    @include above($md) {
+      display: none;
+    }
+
+    .reviews__card {
+      &:nth-child(n+3) {
+        &:not(.is-visible) {
+          .review__image {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(n+4) {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        margin-top: 32px;
+      }
+
+      &.is-visible {
+        display: block;
+      }
+    }
+
+    .review__image {
+      margin-top: 16px;
+
+      img {
+        @include size(100%);
+      }
+
+      picture + picture {
+        img {
+          margin-top: 16px;
+        }
+      }
+    }
+
+    .reviews__load-more {
+      position: relative;
+      margin-top: 45px;
+      text-align: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -250px;
+        left: 0;
+        @include size(100%, 250px);
+        z-index: 1;
+        background:$secondary-color;
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%);
+        pointer-events: none;
+      }
+    }
+
+    .reviews__load-more-button {
+      position: relative;
+      padding-left: 26px;
+      color: $link-color;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include size(16px);
+        transform: translateY(-50%);
+        background-image: url("../assets/img/load-more-icon.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .reviews--desktop {
+    position: relative;
+    margin-top: 65px;
+
+    @include below($md - 1) {
+      display: none;
+    }
+
+    .reviews__card {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .review__content {
+      margin-right: 30px;
+    }
+
+    .review__heading, .review__text {
+      width: 270px;
+    }
+
+    .review__image img {
+      @include size(400px);
+
+      @include above($lg) {
+        @include size(470px, 500px);
+      }
+    }
+
+    .review__image--double {
+      display: flex;
+
+      picture + picture {
+        img {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+
+  .review__author {
+    @include heading-quaternary;
+  }
+
+  .review__stars {
+    margin-top: 8px;
+    @include size(60px, 12px);
+
+    @include above($md) {
+      @include size(90px, 18px);
+    }
+  }
+
+  .review__text {
+    margin-top: 12px;
+  }
+}
