@@ -10,7 +10,8 @@ export const handleFormSubmit = () => {
     const forms = document.querySelectorAll(".form");
     const formMessages = document.querySelectorAll(".form-message");
     const inputs = e.currentTarget.getElementsByTagName("input")
-    const phone = inputs["phone"].value
+    const postcode = 380;
+    const phone = postcode + inputs["phone"].value
     const token = inputs["gorilla.csrf.Token"].value
 
     const resp = await fetch("/api/v1/crm/lead", {
