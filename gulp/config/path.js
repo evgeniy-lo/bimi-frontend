@@ -6,24 +6,24 @@ const sourceFolder = `./source`;
 
 export const path = {
   build: {
-    assets: `${buildFolder}/assets/`,
-    scripts: `${buildFolder}/js/`,
-    styles: `${buildFolder}/css/`,
-    images: `${buildFolder}/assets/img/`,
+    assets: `${buildFolder}/static/`,
+    scripts: `${buildFolder}/static/js/`,
+    styles: `${buildFolder}/static/style/`,
+    images: `${buildFolder}/static/images/`,
     html: `${buildFolder}/`
   },
   source: {
-    assets: `${sourceFolder}/assets/**/*.*`,
-    scripts: `${sourceFolder}/js/main.js`,
-    styles: `${sourceFolder}/scss/main.scss`,
-    images: `${sourceFolder}/assets/img/**/*.{jpg,jpeg,png,gif,webp}`,
-    svg: `${sourceFolder}/assets/img/**/*.svg`,
+    assets: `${sourceFolder}/static/{favicon,fonts}/*.*`,
+    scripts: `${sourceFolder}/static/js/main.js`,
+    styles: `${sourceFolder}/static/scss/main.scss`,
+    images: `${sourceFolder}/static/images/**/*.{jpg,jpeg,png,gif,webp}`,
+    svg: `${sourceFolder}/static/images/**/*.svg`,
     html: `${sourceFolder}/*.html`
   },
   watch: {
-    scripts: `${sourceFolder}/js/**/*.js`,
-    styles: `${sourceFolder}/scss/**/*.scss`,
-    images: `${sourceFolder}/assets/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
+    scripts: `${sourceFolder}/static/js/**/*.js`,
+    styles: `${sourceFolder}/static/scss/**/*.scss`,
+    images: `${sourceFolder}/static/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     html: `${sourceFolder}/*.html`
   },
   clean: buildFolder,

@@ -195,7 +195,6 @@ design
 
 ### Custom ###
 dist
-dist-backend
 zip
 www
 package-lock.json

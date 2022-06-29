@@ -41,9 +41,9 @@
   }
 
   &:before {
-    background-image: url("../assets/img/header-image.jpg");
+    background-image: url("../images/header-image.jpg");
     @include retina {
-      background-image: url("../assets/img/header-image@2x.jpg");
+      background-image: url("../images/header-image@2x.jpg");
     }
   }
 

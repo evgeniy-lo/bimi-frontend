@@ -69,23 +69,23 @@
   }
 
   .about__card--image-1 {
-    background-image: url("../assets/img/about-image-1.jpg");
+    background-image: url("../images/about-image-1.jpg");
     @include retina {
-      background-image: url("../assets/img/about-image-1@2x.jpg");
+      background-image: url("../images/about-image-1@2x.jpg");
     }
   }
 
   .about__card--image-2 {
-    background-image: url("../assets/img/about-image-2.jpg");
+    background-image: url("../images/about-image-2.jpg");
     @include retina {
-      background-image: url("../assets/img/about-image-2@2x.jpg");
+      background-image: url("../images/about-image-2@2x.jpg");
     }
   }
 
   .about__card--image-3 {
-    background-image: url("../assets/img/about-image-3.jpg");
+    background-image: url("../images/about-image-3.jpg");
     @include retina {
-      background-image: url("../assets/img/about-image-3@2x.jpg");
+      background-image: url("../images/about-image-3@2x.jpg");
     }
   }
 
