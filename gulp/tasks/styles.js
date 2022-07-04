@@ -29,6 +29,7 @@ export const styles = () => {
         cascade: false,
       }
     ))
+    .pipe(app.gulp.dest(app.path.build.styles))
     .pipe(cleancss())
     .pipe(rename({
       extname: ".min.css"
